@@ -1,0 +1,10 @@
+import java.util.Scanner;
+public class solution {
+    public static void main(String[] args) {
+        Scanner sca = new Scanner(System.in);
+        String first = sc.nextLine().trim();
+        String second = sc.nextLine().trim();
+     String result = first + second;
+     System.out.println(result);
+    }
+}
