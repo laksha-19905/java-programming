@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class solution{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+       if (isAlternating(s)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+    public static boolean isAlternating(String s) {
+        if (s.length() < 2) return false;
+        char a = s.charAt(0);
+        char b = '\0';
+    for (int i = 1; i < s.length(); i++) {
+            if (s.charAt(i) != a) {
+                b = s.charAt(i);
+                break;
+            }
+        }
+     if (b == '\0') return false;
+     for (int i = 0; i < s.length(); i++) {
+            if (i % 2 == 0 && s.charAt(i) != a) return false;
+            if (i % 2 == 1 && s.charAt(i) != b) return false;
+        }
+      return true;
+    }
+}
