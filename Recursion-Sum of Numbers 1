@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+      if (n >= 1 && n <= 50) {
+            int sum = calculateSum(n);
+            System.out.printf("The sum of numbers from 1 to %d : %04d\n", n, sum);
+        } else {
+            System.out.println("Enter a Valid Input!!!!!!!!!!!!!!!!!!");
+        }
+    }
+ public static int calculateSum(int n) {
+        if (n == 1)
+            return 1;
+        return n + calculateSum(n - 1);
+    }
+}
